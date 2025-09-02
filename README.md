@@ -7,9 +7,8 @@ Deploy a simple web app on AWS using Terraform
 - SSH key pair (cloud-engineer-key.pem)  
 
 ## How to Deploy  
-```bash  
 terraform init  
 terraform apply 
 
-## How to Destroy 
+## How to Destroy
 terraform destroy  
