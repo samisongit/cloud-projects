@@ -1,0 +1,15 @@
+# Week 1 Capstone - Web App Deployment
+Deploy a simple web app on AWS using Terraform
+
+## Architecture
+- AWS account with programmatic access
+- Terraform CLI installed  
+- SSH key pair (cloud-engineer-key.pem)  
+
+## How to Deploy  
+```bash  
+terraform init  
+terraform apply 
+
+## How to Deploy 
+terraform destroy  
