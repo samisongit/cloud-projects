@@ -11,5 +11,5 @@ Deploy a simple web app on AWS using Terraform
 terraform init  
 terraform apply 
 
-## How to Deploy 
+## How to Destroy 
 terraform destroy  
