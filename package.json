@@ -1,0 +1,15 @@
+{
+  "name": "cloud-projects",
+  "version": "1.0.0",
+  "description": "## Structure - dev/: Development environment - stage/: Staging environment - prod/: Production environment - scripts/: Executable automation scripts (restricted access) - docs/: Documentation (shared access)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
