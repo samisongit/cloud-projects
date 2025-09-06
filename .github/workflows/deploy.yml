@@ -28,7 +28,7 @@ jobs:
           docker stop cloud-app || true
           docker rm cloud-app || true
           docker run -d -p 3000:3000 --name cloud-app ${{ secrets.DOCKERHUB_USERNAME }}/cloud-projects:latest
-          - name: Notify deployment success
+      - name: Notify deployment success
          uses: actions/github-script@v6
          with:
           script: |
