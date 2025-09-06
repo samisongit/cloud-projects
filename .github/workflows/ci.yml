@@ -51,3 +51,5 @@ jobs:
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/cloud-projects:node${{ matrix.node-version }}-latest
             ${{ secrets.DOCKERHUB_USERNAME }}/cloud-projects:node${{ matrix.node-version }}-${{ github.sha }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/cloud-projects:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/cloud-projects:${{ github.sha }}
