@@ -9,9 +9,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: 
+    environment:
       name: production
-      url: https://your-app-url.com  # Optional: replace with real URL later
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -28,13 +27,14 @@ jobs:
           docker stop cloud-app || true
           docker rm cloud-app || true
           docker run -d -p 3000:3000 --name cloud-app ${{ secrets.DOCKERHUB_USERNAME }}/cloud-projects:latest
+
       - name: Notify deployment success
-         uses: actions/github-script@v6
-         with:
+        uses: actions/github-script@v6
+        with:
           script: |
-           github.rest.repos.createCommitComment({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            commit_sha: context.sha,
-            body: '✅ Deployment to production succeeded! App is live.'
-           })
+            github.rest.repos.createCommitComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              commit_sha: context.sha,
+              body: '✅ Deployment to production succeeded! App is live.'
+            })
